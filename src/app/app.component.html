@@ -1,9 +1,9 @@
-<app-header></app-header>
+<app-header (componentSelectEmitter) = "onListen($event)"></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-recipes></app-recipes>
-            <app-shopping-list></app-shopping-list> 
+            <app-recipes *ngIf="activeComponent==='r'"></app-recipes>
+            <app-shopping-list *ngIf="activeComponent==='s'"></app-shopping-list> 
         </div>
     </div>
 </div>

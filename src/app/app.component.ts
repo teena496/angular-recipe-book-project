@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+
+activeComponent = 'r';
+
+  onListen(data: string) {
+    this.activeComponent = data;
+  }
 }
